@@ -22,10 +22,8 @@ public class DriverProvider {
     public static WebDriver driver;
 
     public static WebDriver getCurrentDriver() {
-            if (driver == null) {
-                init();
-            }
-            return driver;
+        init();
+        return driver;
     }
 
     private static void init() {
@@ -37,10 +35,8 @@ public class DriverProvider {
     }
 
     public static void closeDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null;
-        }
+        driver.quit();
+        driver = null;
     }
 
     public static void waitForJQueryToBeActive() throws InterruptedException {
